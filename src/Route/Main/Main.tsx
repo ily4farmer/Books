@@ -29,7 +29,7 @@ const Main:FC = () => {
         return false
     }
     dispatch({type: "FETCH__BOOKS"})
-    fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}+subject:${select}&maxResults=40&key=AIzaSyAPjavbUjPoUoOSx6MvpGxeNbVfeRqxfj4`)
+    fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}+subject:${select}&maxResults=40`)
     .then(response => response.json() as Promise<IResponse>)
     .then(response => {
         console.log(response);
